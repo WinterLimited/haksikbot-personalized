@@ -15,8 +15,8 @@ public class MenuService {
 
     private final MenuRepository menuRepository;
 
-    public Optional<Menu> findOne(Long id) {
-        return menuRepository.findById(id);
+    public Optional<Menu> findOne(String menuName) {
+        return menuRepository.findByMenuName(menuName);
     }
 
     public void save(Menu menu) {

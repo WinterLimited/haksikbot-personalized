@@ -25,6 +25,10 @@ public class UserMenuScoreService {
         return userMenuScoreRepository.findById(id);
     }
 
+    public Optional<UserMenuScore> findByUserIdAndMenuMenuName(Long userId, String menuName) {
+        return userMenuScoreRepository.findByUserIdAndMenuMenuName(userId, menuName);
+    }
+
     public void save(UserMenuScore userMenuScore) {
         userMenuScoreRepository.save(userMenuScore);
     }
