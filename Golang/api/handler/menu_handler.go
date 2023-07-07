@@ -13,7 +13,12 @@ import (
 * 모든 메뉴에 대한 정보를 반환
  */
 func GetMenusHandler(w http.ResponseWriter, r *http.Request) {
-	service.FindMenus()
+	menus, err := service.FindMenus()
+	if err != nil {
+		// 에러 처리
+	}
+	json.NewEncoder(w).Encode(menus)
+
 }
 
 /**
@@ -69,6 +74,6 @@ func PostMenuScoreHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	} else {
 		// 요청 바디에 담긴 사용자 ID를 가진 User가 있으면 updateMenuScore
-		updateMenuScore(user, request.MenuName, request.Score)
+		service.UpdateMenuScore(user, request.MenuName, request.Score)
 	}
 }
