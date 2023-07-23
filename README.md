@@ -69,7 +69,7 @@ http.HandleFunc("/api/users/", getUserHandler)
 
 ## 개발 진행 상황 - Go
 
-코드의 리팩토링, ScyllaDB와의 연동을 통한 데이터 관리 예정입니다.
+코드의 리팩토링, ScyllaDB와의 연동을 통한 데이터 관리 예정입니다. =>
 [caucat_haksikbot repository에서 진행](https://github.com/WinterLimited/caucat_haksikbot)
 
 
